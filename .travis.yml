@@ -27,6 +27,3 @@ before_script:
   - "awk -i inplace 'FNR == 17 {gsub(/eventbrite:/,"eventbrite: 1234567890AB")};1' index.md"
 script:
   - python bin/workshop_check.py .
-branches:
-  only:
-    - gh-pages
